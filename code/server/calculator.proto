@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Req {
+    string sentence = 1;
+}
+
+message Res {
+    string token = 1;
+    string label = 2;
+    string alpha_sentences = 3;
+    string alpha_words = 4;
+}
+
+service Calculator {
+    rpc analysis (Req) returns (Res) {}
+}
+
